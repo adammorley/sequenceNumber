@@ -1,0 +1,23 @@
+#
+# sequence generator design
+#
+# in many database implementations, sequences are available to allow customers to create an ordering of events in a datastore.  this sequence generator implements a sequential number generator which allows consumers to get an ever increasing sequence number.
+#
+# it will be extended to persist the sequences, and later to replicate them, and finally to request them over the network.
+#
+# general use case: 
+#
+#	discover group using dns name (eg: sequencer.myweb.com)
+# 	open conenction to any node in group on configurable port
+#	make call get-id to endpoint
+#	endpoint generates sequence number
+#	later: endpoint replicates sequence number
+#	later: endpoint persists current sequence number
+#	endpoint returns sequence number
+#
+#
+# wire format: leverage protocol buffers
+#
+# 	request: {'time': 'utc time', 'request': 'get', 'scope': 'sequenceNumber', 'request-id': 'client-generated string'}
+	reply: {'reply': 'sequenceNumber', 'sequenceNumber'
+

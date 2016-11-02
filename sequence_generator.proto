@@ -1,0 +1,13 @@
+syntax = "proto3";
+package sequenceNumber;
+
+service SequenceNumberGenerator {
+    rpc GenerateSequenceNumber(q_SequenceNumber) returns (p_SequenceNumber) {}
+}
+
+message q_SequenceNumber {
+}
+
+message p_SequenceNumber {
+    string sequenceNumber = 1;
+}
