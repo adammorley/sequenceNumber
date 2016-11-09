@@ -18,6 +18,9 @@
 #
 # wire format: leverage protocol buffers
 #
-# 	request: {'time': 'utc time', 'request': 'get', 'scope': 'sequenceNumber', 'request-id': 'client-generated string'}
-	reply: {'reply': 'sequenceNumber', 'sequenceNumber'
+
+store sequence number as json {'sequenceNumber': XX}
+open file with error checks
+flush file object
+also implement reader
 
