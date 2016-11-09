@@ -8,7 +8,7 @@ import sequence_generator_pb2
 
 import SequenceNumber
 
-numberGenerator = SequenceNumber.NumberGenerator()
+numberGenerator = SequenceNumber.NumberGenerator('sequenceNumber')
 
 class SequenceNumberGenerator(sequence_generator_pb2.SequenceNumberGeneratorServicer):
 
